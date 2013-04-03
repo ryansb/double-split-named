@@ -7,13 +7,35 @@ $TTL 3h
 		5m                ; Expire after 5 minutes
 		5m)             ; Minimum negative caching of 5m
 @			IN NS    ns1.midco.sa3.
-@		3600	IN MX 10 mail.midco.sa3.
-@		3600    IN A	129.21.50.132
-ns1		3600    IN A	129.21.50.132
-www		3600	IN A	129.21.49.144
-mail		3600	IN A	129.21.50.132
+@		3600	IN MX 10 	mail.midco.sa3.
+@		3600    IN A		10.15.27.1
+ns1		3600    IN A		10.15.27.1
+ns2		3600    IN A		10.15.27.6
+www		3600	IN CNAME		pride.midco.sa3.
+pop		3600	IN CNAME		pride.midco.sa3.
+imap	3600	IN CNAME		pride.midco.sa3.
+smtp	3600	IN CNAME		pride.midco.sa3.
+vpn			3600	IN CNAME	sloth.midco.sa3.
 
 ; internal-only records
-nfs		3600	IN A	129.21.50.144
+pride		3600	IN A		10.15.27.1
+intranet	3600	IN CNAME	pride.midco.sa3.
+intranet	3600	IN CNAME	rsyslog.midco.sa3.
+intranet	3600	IN CNAME	sftp.midco.sa3.
+
+sloth		3600	IN A		10.15.27.6
+ldap		3600	IN CNAME	sloth.midco.sa3.
+kerberos	3600	IN CNAME	sloth.midco.sa3.
+dhcp		3600	IN CNAME	sloth.midco.sa3.
+
+envy		3600	IN A		10.15.27.11
+nfs			3600	IN CNAME	envy.midco.sa3.
+samba		3600	IN CNAME	envy.midco.sa3.
+ftp			3600	IN CNAME	envy.midco.sa3.
+ntp			3600	IN CNAME	envy.midco.sa3.
+backup		3600	IN CNAME	envy.midco.sa3.
+
 internal 		NS 	ns1.internal.midco.sa3.
-ns1.internal		A	129.21.50.132
+internal 		NS 	ns2.internal.midco.sa3.
+ns1.internal		A	10.15.27.6
+ns2.internal		A	10.15.27.1

@@ -7,8 +7,13 @@ $TTL 3h
 		5m                ; Expire after 5 minutes
 		5m)             ; Minimum negative caching of 5m
 @			IN NS    ns1.midco.sa3.
-@		3600	IN MX 10 mail.midco.sa3.
-@		3600    IN A	129.21.50.132
-ns1		3600    IN A	129.21.50.132
-www		3600	IN A	129.21.49.144
-mail		3600	IN A	129.21.50.132
+@			3600	IN MX 10	smtp.midco.sa3.
+@			3600    IN A		10.111.231.1
+ns1			3600    IN A		10.111.231.1
+ns1			3600    IN A		10.111.231.6
+www			3600	IN A		10.111.231.1
+pop			3600	IN A		10.111.231.1
+imap		3600	IN A		10.111.231.1
+smtp		3600	IN A		10.111.231.1
+vpn			3600	IN A		10.111.231.6
+ftp			3600	IN A		10.111.231.11
