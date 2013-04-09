@@ -1,0 +1,13 @@
+$ORIGIN 27.15.10.in-addr.arpa.
+$TTL 3h
+@	IN SOA ns1.midco.sa3. ryansb.midco.sa3. (
+		2013040801        ; Serial yyyymmddnn
+		5m                ; Refresh After 5 minutes
+		5m                ; Retry Retry after 5 minutes
+		5m                ; Expire after 5 minutes
+		5m)             ; Minimum negative caching of 5m
+			IN NS    ns1.midco.sa3.
+			IN NS    ns2.midco.sa3.
+1			3600	IN PTR		pride.midco.sa3.
+6			3600	IN PTR		envy.midco.sa3.
+11			3600	IN PTR		sloth.midco.sa3.

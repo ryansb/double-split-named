@@ -1,19 +1,20 @@
 $ORIGIN midco.sa3.
 $TTL 3h
 @	IN SOA ns1.midco.sa3. ryansb.midco.sa3. (
-		2013040101        ; Serial yyyymmddnn
+		2013040801        ; Serial yyyymmddnn
 		5m                ; Refresh After 5 minutes
 		5m                ; Retry Retry after 5 minutes
 		5m                ; Expire after 5 minutes
 		5m)             ; Minimum negative caching of 5m
 @			IN NS    ns1.midco.sa3.
+@			IN NS    ns2.midco.sa3.
 @			3600	IN MX 10	smtp.midco.sa3.
 @			3600    IN A		10.111.231.1
 ns1			3600    IN A		10.111.231.1
-ns1			3600    IN A		10.111.231.6
+ns2			3600    IN A		10.111.231.11
 www			3600	IN A		10.111.231.1
 pop			3600	IN A		10.111.231.1
 imap		3600	IN A		10.111.231.1
 smtp		3600	IN A		10.111.231.1
 vpn			3600	IN A		10.111.231.6
-ftp			3600	IN A		10.111.231.11
+ftp			3600	IN A		10.111.231.1
