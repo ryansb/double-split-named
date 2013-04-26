@@ -12,10 +12,34 @@ $TTL 1m
 @			IN A		10.111.231.1
 ns1			IN A		10.111.231.1
 ns2			IN A		10.111.231.11
-www			IN A		10.111.231.1
-dubbs		IN CNAME	www.midco.hugeco.sa3.
-pop			IN A		10.111.231.1
-imap		IN A		10.111.231.1
-smtp		IN A		10.111.231.1
-vpn			IN A		10.111.231.7
-ftp			IN A		10.111.231.1
+www		IN CNAME	pride
+dubbs	IN CNAME	pride
+pop		IN CNAME	pride
+imap	IN CNAME	pride
+smtp	IN A		10.15.27.1
+vpn		IN A		10.15.27.7
+
+; internal-only records
+pride		IN A		10.15.27.1
+intranet	IN CNAME	pride
+rsyslog		IN CNAME	pride
+sftp		IN CNAME	pride
+
+sloth		IN A		10.15.27.6
+_xmpp-client		SRV		5 0 5222 jabber
+_xmpp-server		SRV		0 5 5269 jabber
+_xmppconnect		TXT		"_xmpp-client-tcp=jabber.midco.hugeco.sa3:5222"
+ldap		IN CNAME	sloth
+kerberos	IN CNAME	sloth
+dhcp		IN CNAME	sloth
+jabber		IN A		10.15.27.6
+
+envy		IN A		10.15.27.11
+envy2		IN A		10.15.27.12
+nfs			IN CNAME	envy
+samba		IN CNAME	envy
+ftp			IN CNAME	pride
+ntp			IN CNAME	envy
+backup		IN CNAME	envy
+
+localhost		IN	A		127.0.0.1
