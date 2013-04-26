@@ -1,0 +1,4 @@
+*.swp
+*.jnl
+slave/
+*.log
