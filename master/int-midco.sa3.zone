@@ -1,40 +1,46 @@
 $ORIGIN midco.sa3.
-$TTL 3h
+$TTL 1m
 @	IN SOA ns1.midco.sa3. ryansb.midco.sa3. (
-		2013040801        ; Serial yyyymmddnn
+		2013042501        ; Serial yyyymmddnn
 		5m                ; Refresh After 5 minutes
 		5m                ; Retry Retry after 5 minutes
 		5m                ; Expire after 5 minutes
 		5m)             ; Minimum negative caching of 5m
 @				IN NS    	ns1.midco.sa3.
 @				IN NS    	ns2.midco.sa3.
-@		3600	IN MX 10 	smtp.midco.sa3.
-@		3600    IN A		10.15.27.1
-ns1		3600    IN A		10.15.27.1
-ns2		3600    IN A		10.15.27.11
-www		3600	IN CNAME	pride.midco.sa3.
-pop		3600	IN CNAME	pride.midco.sa3.
-imap	3600	IN CNAME	pride.midco.sa3.
-smtp	3600	IN A		10.15.27.1
-vpn		3600	IN CNAME	sloth.midco.sa3.
+@		IN MX 10 	smtp.midco.sa3.
+@		IN A		10.15.27.1
+ns1		IN A		10.15.27.1
+ns2		IN A		10.15.27.11
+www		IN CNAME	pride.midco.sa3.
+dubbs	IN CNAME	pride.midco.sa3.
+pop		IN CNAME	pride.midco.sa3.
+imap	IN CNAME	pride.midco.sa3.
+smtp	IN A		10.15.27.1
+vpn		IN A		10.15.27.7
 
 ; internal-only records
-pride		3600	IN A		10.15.27.1
-intranet	3600	IN CNAME	pride.midco.sa3.
-rsyslog		3600	IN CNAME	pride.midco.sa3.
-sftp		3600	IN CNAME	pride.midco.sa3.
+pride		IN A		10.15.27.1
+intranet	IN CNAME	pride.midco.sa3.
+rsyslog		IN CNAME	pride.midco.sa3.
+sftp		IN CNAME	pride.midco.sa3.
 
-sloth		3600	IN A		10.15.27.6
-ldap		3600	IN CNAME	sloth.midco.sa3.
-kerberos	3600	IN CNAME	sloth.midco.sa3.
-dhcp		3600	IN CNAME	sloth.midco.sa3.
+sloth		IN A		10.15.27.6
+_xmpp-client		SRV		5 0 5222 jabber.midco.sa3.
+_xmpp-server		SRV		0 5 5269 jabber.midco.sa3.
+_xmppconnect		TXT		"_xmpp-client-tcp=jabber.midco.sa3:5222"
+ldap		IN CNAME	sloth.midco.sa3.
+kerberos	IN CNAME	sloth.midco.sa3.
+dhcp		IN CNAME	sloth.midco.sa3.
+jabber		IN A		10.15.27.6
 
-envy		3600	IN A		10.15.27.11
-nfs			3600	IN CNAME	envy.midco.sa3.
-samba		3600	IN CNAME	envy.midco.sa3.
-ftp			3600	IN CNAME	pride.midco.sa3.
-ntp			3600	IN CNAME	envy.midco.sa3.
-backup		3600	IN CNAME	envy.midco.sa3.
+envy		IN A		10.15.27.11
+envy2		IN A		10.15.27.12
+nfs			IN CNAME	envy.midco.sa3.
+samba		IN CNAME	envy.midco.sa3.
+ftp			IN CNAME	pride.midco.sa3.
+ntp			IN CNAME	envy.midco.sa3.
+backup		IN CNAME	envy.midco.sa3.
 
 internal.midco.sa3.			IN	NS		ns1.internal.midco.sa3.
 internal.midco.sa3.			IN	NS		ns2.internal.midco.sa3.

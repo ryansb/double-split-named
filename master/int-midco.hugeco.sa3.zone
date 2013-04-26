@@ -1,19 +1,19 @@
-$ORIGIN midco.sa3.
+$ORIGIN midco.hugeco.sa3.
 $TTL 1m
-@	IN SOA ns1.midco.sa3. ryansb.midco.sa3. (
+@	IN SOA ns1.midco.hugeco.sa3. ryansb.midco.hugeco.sa3. (
 		2013042501        ; Serial yyyymmddnn
 		5m                ; Refresh After 5 minutes
 		5m                ; Retry Retry after 5 minutes
 		5m                ; Expire after 5 minutes
 		5m)             ; Minimum negative caching of 5m
-@			IN NS    ns1.midco.sa3.
-@			IN NS    ns2.midco.sa3.
-@			IN MX 10	smtp.midco.sa3.
+@			IN NS    ns1.midco.hugeco.sa3.
+@			IN NS    ns2.midco.hugeco.sa3.
+@			IN MX 10	smtp.midco.hugeco.sa3.
 @			IN A		10.111.231.1
 ns1			IN A		10.111.231.1
 ns2			IN A		10.111.231.11
 www			IN A		10.111.231.1
-dubbs		IN CNAME	www.midco.sa3.
+dubbs		IN CNAME	www.midco.hugeco.sa3.
 pop			IN A		10.111.231.1
 imap		IN A		10.111.231.1
 smtp		IN A		10.111.231.1
