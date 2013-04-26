@@ -1,7 +1,7 @@
 $ORIGIN midco.hugeco.sa3.
 $TTL 1m
 @	IN SOA ns1.midco.hugeco.sa3. ryansb.midco.hugeco.sa3. (
-		2013042401        ; Serial yyyymmddnn
+		2013042502        ; Serial yyyymmddnn
 		5m                ; Refresh After 5 minutes
 		5m                ; Retry Retry after 5 minutes
 		5m                ; Expire after 5 minutes

@@ -1,7 +1,7 @@
 $ORIGIN 231.111.10.in-addr.arpa.
 $TTL 1m
 @	IN SOA ns1.midco.sa3. ryansb.midco.sa3. (
-		2013042501        ; Serial yyyymmddnn
+		2013042502        ; Serial yyyymmddnn
 		5m                ; Refresh After 5 minutes
 		5m                ; Retry Retry after 5 minutes
 		5m                ; Expire after 5 minutes
