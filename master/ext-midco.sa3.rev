@@ -1,4 +1,4 @@
-$ORIGIN 231.111.10.in-addr.arpa.
+$ORIGIN 27.15.10.in-addr.arpa.
 $TTL 1m
 @	IN SOA ns1.midco.sa3. ryansb.midco.sa3. (
 		2013042503        ; Serial yyyymmddnn
@@ -8,11 +8,11 @@ $TTL 1m
 		5m)             ; Minimum negative caching of 5m
 			IN NS    ns1.midco.sa3.
 			IN NS    ns2.midco.sa3.
-1	PTR		ns1.midco.sa3.
-1	PTR		smtp.midco.sa3.
-1	PTR		imap.midco.sa3.
-1	PTR		pop.midco.sa3.
-1	PTR		ftp.midco.sa3.
-1	PTR		www.midco.sa3.
-6	PTR		vpn.midco.sa3.
-11	PTR		ns2.midco.sa3.
+1	IN	PTR		ns1.midco.sa3.
+1	IN	PTR		smtp.midco.sa3.
+1	IN	PTR		imap.midco.sa3.
+1	IN	PTR		pop.midco.sa3.
+1	IN	PTR		ftp.midco.sa3.
+1	IN	PTR		www.midco.sa3.
+6	IN	PTR		vpn.midco.sa3.
+11	IN	PTR		ns2.midco.sa3.
