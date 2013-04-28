@@ -1,0 +1,7 @@
+outside# tcpdump -vvv port 53 and host 10.111.231.1                                                                                                   
+tcpdump: listening on em0, link-type EN10MB
+02:37:15.044882 10.101.250.5.20145 > 10.111.231.1.domain: [udp sum ok] 58162+ ANY? 1.231.111.10.in-addr.arpa. (43) (ttl 64, id 3703, len 71)
+02:37:15.047551 10.111.231.1.domain > 10.101.250.5.20145: 58162* q: ANY? 1.231.111.10.in-addr.arpa. 6/2/2 1.231.111.10.in-addr.arpa. [1m] PTR smtp.midco.sa3., 1.231.111.10.in-addr.arpa.[|domain] (ttl 61, id 15311, len 254)
+02:37:19.292718 10.101.250.5.25789 > 10.111.231.1.domain: [udp sum ok] 51869+ PTR? 1.231.111.10.in-addr.arpa. (43) (ttl 64, id 41946, len 71)
+02:37:19.295683 10.111.231.1.domain > 10.101.250.5.25789: 51869* q: PTR? 1.231.111.10.in-addr.arpa. 6/2/2 1.231.111.10.in-addr.arpa. [1m] PTR smtp.midco.sa3., 1.231.111.10.in-addr.arpa.[|domain] (ttl 61, id 39628, len 254)
+

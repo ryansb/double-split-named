@@ -1,0 +1,7 @@
+pride# tcpdump -vvv port 53 and host 10.101.250.5 
+tcpdump: listening on em0, link-type EN10MB
+03:37:13.188775 10.101.250.5.20145 > pride.midco.sa3.domain: [udp sum ok] 58162+ ANY? 1.231.111.10.in-addr.arpa. (43) (ttl 61, id 3703, len 71)
+03:37:13.188972 pride.midco.sa3.domain > 10.101.250.5.20145: 58162* q: ANY? 1.231.111.10.in-addr.arpa. 6/2/2 1.231.111.10.in-addr.arpa. [1m] PTR smtp.midco.sa3., 1.231.111.10.in-addr.arpa.[|domain] (ttl 64, id 15311, len 254)
+03:37:17.436702 10.101.250.5.25789 > pride.midco.sa3.domain: [udp sum ok] 51869+ PTR? 1.27.15.10.in-addr.arpa. (41) (ttl 61, id 41946, len 69)
+03:37:17.436893 pride.midco.sa3.domain > 10.101.250.5.25789: 51869* q: PTR? 1.27.15.10.in-addr.arpa. 6/2/2 1.27.15.10.in-addr.arpa. [1m] PTR smtp.midco.sa3., 1.27.15.10.in-addr.arpa.[|domain] (ttl 64, id 39628, len 252)
+
